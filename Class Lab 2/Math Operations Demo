@@ -1,0 +1,51 @@
+/**
+* This program takes 2 integers and gets the sum, product, difference, quotient, remainder
+* and max and min values
+*
+*@author Julien Niles, Phil Barragato
+*@version 1/23/24
+*
+*/
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        int num1;
+        int num2;
+        int Sum;
+        int Difference;
+        int Product;
+        int Quotient;
+        int Modu;
+        int max;
+        int min;
+
+        System.out.print("Enter an integer for x: ");
+        num1 = scnr.nextInt();
+
+        System.out.print("Enter an integer for y: ");
+        num2 = scnr.nextInt();
+
+        Sum = num1 + num2;
+        Difference = num1 - num2;
+        Product = num1 * num2;
+        Quotient = num1 / num2;
+        Modu = num1 % num2;
+        max =  Math.max(num1, num2);
+        min =Math.min(num1, num2);
+        
+        
+        System.out.println("x + Y = " + Sum);
+        System.out.println("x - y = " + Difference);
+        System.out.println("x * y = " + Product);
+        System.out.println("x / y = " + Quotient);
+        System.out.println("x % y = " + Modu);
+        System.out.println("Math.max(x, y) = " + max );
+        System.out.println("Math.min(x, y) = " + min);
+
+
+
+    }
+
+}
