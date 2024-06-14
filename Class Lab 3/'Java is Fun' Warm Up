@@ -1,0 +1,52 @@
+/**
+ * Lab 3, Java is Fun
+ * 
+ * @author Julien and Michael
+ * @version 1/30/24
+ */
+public class Main 
+{
+    /**
+     *  Prints out Java is Fun 
+     */
+    public static void main(String args[])
+    {
+        printForwardSlashLine();
+        printMessage();
+        printForwardSlashLine();
+        printBackslashLine();
+        printMessage();
+        printBackslashLine();
+        printBackslashLine();
+        printMessage();
+        printBackslashLine();
+        printForwardSlashLine();
+        
+    }
+
+    /**
+     * This function prints 20 forward slashes on 
+     * the same line.
+     */ 
+    private static void printForwardSlashLine()
+    {
+        System.out.println("////////////////////");
+    }
+
+    /**
+     * This function prints 20 backslashes on 
+     * the same line.
+     */ 
+    private static void printBackslashLine()
+    {
+        System.out.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+    }
+
+    /**
+     * This function always prints the same message.
+     */ 
+    private static void printMessage()
+    {
+        System.out.println("||   Java is Fun  ||");
+    }
+}
