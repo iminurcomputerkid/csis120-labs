@@ -1,0 +1,47 @@
+/**
+ * Lab 3 - maxOfTwo method
+ * 
+ * @authors Julien and Michael
+ * @version 1/30/24
+ */
+public class Main
+{
+    /**
+     * The main method is provided as a means of testing the
+     * maxOfTwo function written in this lab.  
+     */
+    public static void main(String args[]) {
+       
+        // Add at least two more test cases for maxOfTwo
+        System.out.println("maxOfTwo(2, 5) --> " + maxOfTwo(2, 5));
+        System.out.println("maxOfTwo(2, 9) --> " + maxOfTwo(2, 9));
+        System.out.println("maxOfTwo(8, 6) --> " + maxOfTwo(8, 6));
+        
+    }
+
+    /**
+     * This function returns the largest of two input integers.  If the input
+     * integers are the same value, this function returns -1;
+     * 
+     * You may NOT use Math.max in this function!
+     * 
+     * @param num1 The first input integer.
+     * @param num2 The second input integer.
+     * @return The largest of two input integers or -1 if their values are the same.
+     */
+    public static int maxOfTwo(int num1, int num2) {
+        if (num1 > num2){
+            return num1;
+        }
+        else if (num1 == num2) {
+            return -1;
+        }
+        else {
+            return num2;
+        }
+    }
+}
+
+
+
+    
