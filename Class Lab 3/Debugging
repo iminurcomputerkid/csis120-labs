@@ -1,0 +1,68 @@
+/**
+ * Lab 3 - Debugging 
+ * 
+ * @author Julien and Michael
+ * @version 1/30/24
+ */
+public class Main
+{
+    /**
+     * The main method is provided as a means of testing the
+     * methods written in this lab.  
+     */
+    public static void main(String args[]) {
+       
+        System.out.println("returnEven(-2) --> " + returnEven(-2));
+        System.out.println("returnEven(-3) --> " + returnEven(-3));
+        System.out.println("returnEven(2)  --> " + returnEven(2));
+        System.out.println("returnEven(3)  --> " + returnEven(3));
+
+        System.out.println("getTaxRate(\"Single\", 1)     --> " + getTaxRate("Single", 1));
+        System.out.println("getTaxRate(\"Single\", 50001) --> " + getTaxRate("Single", 50001));
+        System.out.println("getTaxRate(\"Married\", 1)    --> " + getTaxRate("Married", 1));
+        System.out.println("getTaxRate(\"Married\", 50001)--> " + getTaxRate("Married", 50001) );
+    }
+
+    /**
+     * This method takes an integer as input.  If the integer
+     * is odd, the function returns the next largest integer. If
+     * the integer is even, the function returns the integer unchanged.
+     * 
+     * @param val The input integer.
+     * @return The input integer if it is even, otherwise the next largest integer.
+     */
+    public static int returnEven(int val) {
+        int temp = val;
+
+        if(temp % 2 != 0) {
+          temp = temp + 1;
+        }
+        return temp;
+    }
+
+    /**
+     * This method returns the tax rate according to the following rules.
+     * Anyone filing with a status of "Married" has a 9% tax rate.
+     * Anyone filing with a status of "Single" has a 5% tax rate unless
+     * their income is greater than $50,000.  In this case, they have an
+     * 8% tax rate.
+     * 
+     * @param status The filing status.
+     * @param income The income associated with the filing status to the nearst dollar.
+     * @return The tax rate according to the rules.
+     */
+    public static int getTaxRate(String status, int income) {
+        int rate = 9;
+
+        if (status.equals("Single")) {
+            if(income > 50000) {
+                rate = 8;
+            }
+            else {
+                rate = 5;
+            }
+        }
+        return rate;
+    }
+
+}
