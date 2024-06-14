@@ -1,0 +1,67 @@
+/**
+ * Problem Solving with Arrays Lab Activity
+ *
+ * @author
+ * @version
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        int[] vals1 = {90, 91, 74, 54, 85, 86, 95, 70, 69, 99};
+        int[] vals2 = {81, 89, 74, 94, 79, 80};
+        String[] groceries = {"milk", "bread", "juice", "apples", "eggs", "yogurt"};
+        String[] names = {"Karen", "Edwin", "Sheldon", "Taylor"};
+
+        // test calls to array methods
+        printArray(vals1);
+        
+        System.out.println("contains(groceries, \"eggs\"): " + contains(groceries, "eggs") );
+
+        System.out.println("count(vals1, 90, 100): " + count(vals1, 90, 100));        
+    }
+
+    /**
+     * This method prints the contents of the nums array with
+     * commas separating the values.
+     *
+     * @param nums array of values to be printed
+     */
+    public static void printArray( int[] nums )
+    {
+        for(int i = 0; i < nums.length; i++)
+        {
+        System.out.print(nums[i]+ ",");
+        }
+    }
+
+    /**
+     * This method returns true if list contains word, and false otherwise. 
+     *
+     * @param list array of Strings to search
+     * @param word String to search for in array list
+     * @return true if word appears in list, false otherwise
+     */
+    public static boolean contains( String[] list, String word )
+    {
+        for(int i = 0; i < list.length; i++)
+        {
+        return false;
+        }
+    }
+
+    /**
+     * This method returns a count of the number of values in array grades
+     * that are in the range [min,max).  
+     *
+     * @param grades array of grades
+     * @param min the lower bound of the range
+     * @param max the upper bound of the range
+     * @return a count of how many values are in the range [min,max)
+     */
+    public static int count( int[] grades, int min, int max )
+    {
+        return 0;
+    }
+
+
+}
