@@ -1,0 +1,41 @@
+/**
+ * Lab 3 - isInRangeExclusive method
+ * 
+ * @authors Julien and Michael
+ * @version 1/30/24
+ */
+public class Main
+{
+    /**
+     * The main method is provided as a means of testing the
+     * isInRangeExclusive method written in this lab.  
+     */
+    public static void main(String args[]) {
+       
+        // Add at least four more test cases for isInRangeExclusive
+        System.out.println("isInRangeExclusive(3,2,5) --> " + isInRangeExclusive(3,2,5));
+        System.out.println("isInRangeExclusive(4,2,5) --> " + isInRangeExclusive(4,2,5));
+        System.out.println("isInRangeExclusive(6,3,7) --> " + isInRangeExclusive(6,3,7));
+        System.out.println("isInRangeExclusive(9,8,10) --> " + isInRangeExclusive(9,8,10));
+        System.out.println("isInRangeExclusive(4,5,9) --> " + isInRangeExclusive(4,5,9));
+        System.out.println("isInRangeExclusive(2,1,5) --> " + isInRangeExclusive(2,1,5));
+        
+    }
+
+    /**
+     * This method returns true if the input value is within the range 
+     * (min, max).  Example:
+     * The value 3 is in the range (2, 5) but not in the ranges (3, 5) or (1, 3).
+     * 
+     * @param value The value to be tested.
+     * @param min The minimum, exclusive bound of the range.
+     * @param max The maximum, exclusive bound of the range.
+     */
+    public static boolean isInRangeExclusive(int value, int min, int max) {   
+        if((value >= min) && (value <= max)){
+            return true;
+        } else {
+            return false;
+}
+}
+}
