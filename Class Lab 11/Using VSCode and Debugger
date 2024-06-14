@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) 
+    {
+       int remainder = 0;
+       int i = 1;
+       int result = 2;
+
+       while ( result < 100 ) 
+       {
+            remainder = i % 2;
+            // fill in table with values each time 
+            // code reaches the line below 
+            System.out.println("Another iteration");  
+            if ( remainder == 1 )
+            {
+               result = result*3 + i;
+            }  
+            else
+            {
+               result = result - 1;
+            }
+            i = i + 1;  
+       } // end of while loop
+
+       System.out.println("result is: " + result);
+    }
+}
