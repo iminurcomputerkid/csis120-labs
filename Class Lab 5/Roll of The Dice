@@ -1,0 +1,68 @@
+
+
+import java.util.Scanner;
+public class DiceRoll {
+
+    public static void main(String[] args) {
+
+        Scanner scnr = new Scanner(System. in);
+        System.out.print("Enter the roll of three dice: ");
+
+
+
+        int die1 = scnr.nextInt();
+        int die2 = scnr.nextInt();
+        int die3 = scnr.nextInt();
+        int answer = score(die1,die2,die3);
+
+System.out.println("You scored "+answer+" points.");
+
+    }
+
+    public static int score(int die1, int die2, int die3) {
+
+        int sum = die1 + die2 + die3;
+
+        if ((die1 == die2) && (die2 == die3)) {
+            return sum;
+
+        } else if (sum % 2 == 0) {
+            return (sum / 2);
+        } else {
+            return 2;
+        }
+
+
+
+
+    }
+}
+
+
+/**
+     * In a certain game, a player is awarded a number of points based on the
+     * roll of three fair, six-sided dice according to the following rules:
+     *
+     * 1.  If the dice all have the same value, the player is awarded the sum of the dice.
+     * 2.  If the sum of the dice is odd, the player is awarded 2 points.
+     * 3.  If the sum of the dice is even, the player is awarded half the sum of
+     *     dice.
+     *
+     * For example, if the player rolls
+     *
+     * 4 and 4 and 4, the player is awarded 12 points.
+     * 2 and 5 and 3, the player is awarded 5 points.
+     * 4 and 6 and 1, the player is awarded 2 points.
+     *
+     * This function takes as input the value of each die and returns the number
+     * of points awarded.
+     *
+     * @param die1 The value of the first die.
+     * @param die2 The value of the second die.
+     * @param die3 The value of the third die.
+     * @return The number of appoints awarded.
+     *
+     * You may only have 1 return statement in your method!
+     */
+
+// add your method here
