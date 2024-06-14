@@ -1,0 +1,75 @@
+import java.util.Scanner;
+public class Triangles {
+
+    public static void main(String[] args) {
+        System.out.println(isIsosceles(6, 7, 6));
+        System.out.println(isIsosceles(32, 32, 32));
+        System.out.println(isIsosceles(66, 65, 88));
+    System.out.println(isIsosceles(43, 96, 88));
+    }
+
+    /*
+     * Given three side lengths of a triangle, if all are equal, the triangle is
+     * equilateral.
+     *
+     * @param d1 The length of the first side.
+     * @param d2 The length of the second side.
+     * @param d3 The length of the third side.
+     * @return true if the triangle is equilateral and false otherwise.
+     *
+     * You may use only 1 return statement in your method!
+     * */
+    public static boolean isEquilateral(double d1, double d2, double d3) {
+        if (d1 == d2 || d1 == d3 || d2 == d3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /*
+     * Given three side lengths of a triangle, if none are equal, the triangle is
+     * scalene.
+     *
+     * @param d1 The length of the first side.
+     * @param d2 The length of the second side.
+     * @param d3 The length of the third side.
+     * @return true if the triangle is scalene and false otherwise.
+     *
+     * You may use only 1 return statement in your method!
+     */
+    public static boolean isScalene(double d1, double d2, double d3) {
+        if (d1 == d2 || d1 == d3 || d2 == d3 && d1 == d2 && d3 == d1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /*
+     * Given three side lengths of a triangle, if exactly two are equal, the
+     * triangle is isosceles.
+     *
+     * @param d1 The length of the first side.
+     * @param d2 The length of the second side.
+     * @param d3 The length of the third side.
+     * @return true if the triangle is isosceles and false otherwise.
+     *
+     * You may use only 1 return statement in your method!
+     */
+    public static boolean isIsosceles(double d1, double d2, double d3) {
+        if (d1 == d2 && d2 =
+        
+        = d3 && d1 != d3 || d1 == d2 && d3 == d1 && d3 != d2 || d3 == d1 && d1 == d2 && d2 != d3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+/*
+public static double getArea(double d1, double d2, double d3) {
+
+
+}
+*/
