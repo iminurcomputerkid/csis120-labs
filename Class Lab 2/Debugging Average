@@ -1,0 +1,20 @@
+/**
+ * This program attempts to calculate the average of three numbers.
+ * 
+ * @author Julien Niles, Phil Barragot
+ * @version 1/23/24
+ */
+public class Main
+{
+    public static void main(String args[])
+    {
+        int firstNumber = 20;
+        int secondNumber = 30;
+        int thirdNumber = 40;
+        int answer = firstNumber + secondNumber + thirdNumber;
+        int average = answer / 3;
+        System.out.println("The average of 20, 30, and 40 is " + average + "."); 
+        //Expected output is 30
+    }
+
+}
