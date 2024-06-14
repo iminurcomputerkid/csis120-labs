@@ -1,0 +1,80 @@
+/**
+ * Lab 3 - calcGrossPay method
+ * 
+ * @author Julien and Michael
+ * @version 1/30/24
+ */
+public class Main
+{
+    /**
+     * The main method is provided as a means of testing the
+     * calcGrossPay method written in this lab.  
+     */
+    public static void main(String args[]) {
+       
+        // Add at least five more test cases for calcGrossPay
+        System.out.println("calcGrossPay(47, 10.50, \"Exempt\") --> " + calcGrossPay(47, 10.50, "Exempt"));
+        System.out.println("calcGrossPay(47, 10.50, \"Hourly\") --> " + calcGrossPay(47, 10.50, "Hourly"));
+        System.out.println("calcGrossPay(50, 10.50, \"Plus\") --> " + calcGrossPay(50, 10.50, "Plus"));
+        System.out.println("calcGrossPay(55, 10.50, \"Hourly\") --> " + calcGrossPay(55, 10.50, "Hourly"));
+        System.out.println("calcGrossPay(55, 10.50, \"Plus\") --> " + calcGrossPay(55, 10.50, "Plus"));
+    }
+
+    /**
+     * This method calculates a worker's gross pay according to their employee
+     * type.  "Exempt" employees are paid straight time for all hours worked no
+     * matter the number of hours.  "Hourly" employees are paid straight time
+     * for all hours worked up to and including 40 hours.  For hours worked over
+     * the first 40 hours, hourly employees are paid time and a half.  "Plus"
+     * employees are paid straight time for all hours worked up to and including 
+     * 40 hours, time and a half for up to five hours worked over the first 40
+     * hours, and double time for hours worked over the first 45 hours.
+     * 
+     * E.g., An Exempt employee works 47 hours at a rate of $10.50 and is paid $493.50.
+     *       An Hourly employee works 47 hours at a rate of $10.50 and is paid 
+     *          (40 * 10.5) + (7 * 1.5 * 10.5) = $530.25.
+     *       An Plus employee works 47 hours at a rate of $10.50 and is paid
+     *          (40 * 10.5) + (5 * 1.5 * 10.5) + (2 * 2 * 10.5) = $540.75.
+     *          
+     * @param hoursWorked The number of hours the employee worked.
+     * @param rate The hourly rate at which the employee is paid.
+     * @param empType The employee's classification.  Valid types are Exempt, Hourly, and Plus.
+     * @return The employee's gross pay.
+     */
+
+     
+     
+    public static double calcGrossPay(int hoursWorked, double rate, String empType) {
+        double totalPay = 0;
+        double base = 40*rate;
+      
+
+        if (empType.equals("Exempt")){
+             totalPay = hoursWorked * rate;
+        }
+
+        if (empType.equals("Hourly") && (hoursWorked > 40)) {
+            totalPay = (hoursWorked*rate) + (hoursWorked-40)*(1.5*rate);
+        } else { 
+            totalPay = hoursWorked * rate;
+        }
+       
+
+
+        if (empType.equals("Plus") && (hoursWorked > 40)) {
+            if (hoursWorked > 45) {
+                int hoursOver_40 = hoursWorked - 40;
+                int hoursOver_45 = hoursWorked - 45;
+                base = hoursWorked * rate;
+                totalPay = base + ((hoursOver_40-hoursOver_45)*(rate*1.5)) + (hoursOver_45*(rate*2));
+            
+            }
+        }
+
+
+             
+            
+         return totalPay;
+    }
+
+}
