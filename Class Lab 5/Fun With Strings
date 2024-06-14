@@ -1,0 +1,98 @@
+
+/**
+ * Follow the directions in the main method to make an anagram and
+ * check its attributes.
+ * 
+ * When forming the anagram, you must use methods of the String class to
+ * put the letters of the original word in the correct order, with the correct
+ * case. Each letter in the anagram must be selected from the original word.
+ *  
+ * @author Julien and Sushmita
+ * @version 2/13/24
+ */
+public class FunWithStrings
+{
+    public static void main(String[] args)
+    {
+        
+        /*
+         * Use the letters in word to make the anagram I am LORD Voldemort.  Assign the anagram
+         * to a new variable called anagram.  
+         * 
+         * Be sure to use each of the following methods of the String class at least one time.
+         *
+         *  charAt 
+         *  indexOf 
+         *  length 
+         *  substring 
+         *  toLowerCase 
+         *  toUpperCase 
+         *  
+         *  There are many possible solutions!
+         */
+        String word = "Tom Marvolo Riddle";
+        String anagram = "";
+
+        String str1 = "" + word.charAt(13);
+        String one = str1.toUpperCase();
+
+        String str2 = "" + word.charAt(5);
+
+        String str3 = "" + word.charAt(4);
+        String three = str3.toLowerCase();
+
+        String str4 = "" + word.charAt(word.length() - 2);
+        String four = str4.toUpperCase();
+
+        String str5 = "" + word.charAt(1);
+        String five = str5.toUpperCase();
+
+        String str6 = "" + word.charAt(6);
+        String six = str6.toUpperCase();
+
+        String str7 = "" + word.charAt(14);
+        String seven = str7.toUpperCase();
+
+        String str8 = "" + word.charAt(7);
+        String eight = str8.toUpperCase();
+
+        String str9 = "" + word.substring(8,10);
+
+        String str10 = "" + word.charAt(15);
+
+        String str11 = "" + word.charAt(17);
+
+        String str12 = "" + word.charAt(2);
+
+        String str13 = "" + word.charAt(word.indexOf("o"));
+
+        String str14 = "" + word.charAt(12);
+        String fourteen = str14.toLowerCase();
+
+        String str15 = "" + word.charAt(0);
+        String fifteen = str15.toLowerCase();
+
+        String length = one + " " + str2 + three + " " + four + five + six + seven + " " + eight + str9 + str10 + str11 + str12 + str13 + fourteen + fifteen;
+        System.out.println(word);
+        System.out.println(length);
+        
+        
+
+
+
+
+
+         
+
+
+
+        // your code to create the anagram goes here
+        
+
+        //Use one print statement to print the word and it's anagram, each on their own line.
+        
+        
+        
+        
+    }
+}
