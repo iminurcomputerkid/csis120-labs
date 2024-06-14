@@ -1,0 +1,54 @@
+/**
+ * Lab 6, Eliza Therapist 
+ * 
+ * @author Julien 
+ * @version 2/20/24
+ */
+import java.util.Scanner;
+public class ElizaTherapist {
+
+    /**
+     * The main method prompts the patient to enter a line describing
+     * what is on their mind.  It then calls the method getResponse
+     * below to get an appropriate response, which it then prints.
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System. in);
+        System.out.println("What is on your mind? ");
+        String word = scanner.nextLine();
+        System.out.println(getResponse(word));
+
+        
+    }
+
+    /**
+     * This method returns a response to the input line.  If the line
+     * contains the word mother, it returns "Tell me more about your
+     * mother."  If the line ends in a `!`, it should return "Oh my.
+     * Don't get so excited."  Otherwise, it should return "Hmm... tell
+     * me more." Your method should use only 1 return statement.
+     *
+     * @param line a patients response to what is on their mind
+     * @return a therapist's response
+     */
+    public static String getResponse(String word) 
+    {
+        String s1;
+        if((word.indexOf("mother") < 0) && (word.charAt(word.length()-1) != '!'))
+        {
+            s1 = "Hmmmm tell me more";
+        } 
+        else if ((word.charAt(word.length()-1) == '!') && (word.indexOf("mother") < 0))
+        {
+            s1 = "Oh my. Don't get so excited";
+        } 
+        else
+        {
+            s1 = "tell me more about your mother";
+        }
+        return s1;
+
+    }
+
+
+}
