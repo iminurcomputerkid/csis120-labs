@@ -1,0 +1,94 @@
+/**
+ * Lab 3 - isMultipleOfNine method
+ * 
+ * @authors Julien and Michael
+ * @version 1/30/24
+ */
+public class Main
+{
+    /**
+     * The main method is provided as a means of testing the
+     * isMultipleOfNine method written in this lab.  
+     */
+    public static void main(String args[]) {
+       
+        // Add at least five more test cases for isMultipleOfNine
+        System.out.println("isMultipleOfNine(9) --> " + isMultipleOfNine(9));
+        System.out.println("isMultipleOfNine(117) --> " + isMultipleOfNine(117));
+        System.out.println("isMultipleOfNine(72) --> " + isMultipleOfNine(72));
+        System.out.println("isMultipleOfNine(81) --> " + isMultipleOfNine(81));
+        System.out.println("isMultipleOfNine(71) --> " + isMultipleOfNine(71));
+        System.out.println("isMultipleOfNine(23) --> " + isMultipleOfNine(23));
+    }
+
+    /**
+     * It is well known that the digits of an integer
+     * that is a multiple of nine sum to nine.  For example,
+     * 
+     * 72 -> 7 + 2 = 9 -> 72 = 9 * 8
+     * 117 -> 1 + 1 + 7 = 9 -> 117 =  9 * 13
+     * 99 -> 9 + 9 = 18 --> 1 + 8 = 9 --> 9 * 11 (notice this requires two addition steps)
+     * 
+     * This method takes as input a single positive integer in the range
+     * [1, 999].  It returns true if the sum of the digits of the input
+     * integer is nine and false otherwise.
+     * 
+     * Notes to the programmer:  You may NOT check if the number is divisible by
+     * nine using any other method.  You can assume the input value is in the
+     * correct range when the function is called.
+     * 
+     * @param num A positive integer in the range [1, 999].
+     * @return true if the number is divisible by 9 and false otherwise.
+     */
+    public static boolean isMultipleOfNine(int num)
+    {
+        int sum;
+        if (num > 100) {
+            int digt1 = num % 10;
+            num = num/10;
+            int digt2 = num % 10;
+            num = num/10;
+            int digt3 = num % 10;
+            num = mum/10;
+            int digt4 = num % 10;
+            num = num/10;
+            int digt5 = num % 10;
+            num = num/10;
+            int digt6 = num % 10;
+            num = num/10;
+            int digt7 = num % 10;
+            num = num/10;
+            int digt8 = num % 10;
+            num = num/10;
+            int digt9 = num % 10;
+            //num = num/10;
+
+            sum = digt1 + digt2 + digt3+ digt4 + digt5 + digt6 + digt7;
+            if (sum == 9||sum == 18||sum == 27) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        if (num > 10) {
+            int digt1 = num % 10;
+            num = num/10;
+            int digt2 = num % 10;
+            num = num/10;
+            sum = digt1 + digt2;
+            if(sum == 9 || sum == 18) {
+                return true;
+            } else {
+                return false;
+            }
+        } 
+        
+        if (num == 9) {
+            return true;
+        } else { 
+        return false;
+        }
+
+    }
+}
